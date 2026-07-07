@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Slot Art Festival 2026 · Mój plan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">SLOT</div>
+      <div class="brand-text">
+        <h1>Slot Art Festival</h1>
+        <span>8–12.07.2026 · Lubiąż</span>
+      </div>
+    </div>
+
+    <nav class="view-switch" id="viewSwitch">
+      <button class="view-btn is-active" data-view="program">Program</button>
+      <button class="view-btn" data-view="plan">Mój plan</button>
+    </nav>
+  </header>
+
+  <div class="controls">
+    <div class="day-tabs" id="dayTabs"></div>
+
+    <div class="control-row" id="programControls">
+      <div class="chips" id="categoryChips"></div>
+      <div class="search-wrap">
+        <input type="search" id="searchInput" placeholder="Szukaj wydarzenia…" />
+      </div>
+    </div>
+
+    <div class="control-row" id="planControls" hidden>
+      <div class="chips" id="statusChips"></div>
+      <div class="plan-summary" id="planSummary"></div>
+    </div>
+  </div>
+
+  <main id="main">
+    <section class="allday" id="alldayRow" hidden></section>
+    <div class="calendar" id="calendar"></div>
+    <div class="empty" id="emptyState" hidden></div>
+  </main>
+
+  <div class="sheet-backdrop" id="sheetBackdrop" hidden></div>
+  <aside class="sheet" id="sheet" hidden aria-hidden="true"></aside>
+
+  <div class="legend" id="legend"></div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
